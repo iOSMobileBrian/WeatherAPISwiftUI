@@ -12,7 +12,7 @@ class WeatherService {
     
     func getWeather(city: String, completion: @escaping (Weather?) -> ()){
         
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=9f300e8724dfe3db5e697258577cc991&units=imperial") else {
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid={API_KEY}&units=imperial") else {
             completion(nil)
             return
         }
